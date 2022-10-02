@@ -58,7 +58,7 @@
       const thisBook = this;
 
       const favoriteBooks = [];
-      thisBook.filters = []; //informacje, jakie aktualnie filtry są wybrane w aplikacji
+      thisBook.filters = [];
 
       for (let bookImage of this.booksImagesContainer) {
 
@@ -134,7 +134,6 @@
       } else if (rating > 9) {
         return 'linear-gradient(to bottom, #ff0084 0%,#ff0084 100%);';
       }
-        
     }
 
   }

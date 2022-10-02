@@ -5,7 +5,7 @@ dataSource.books = [
     id: 1,
     name: 'Lady in red',
     price: 20,
-    rating: 8,
+    rating: 4,
     image: 'images/books/1.jpg',
     details: {
       adults: true,
