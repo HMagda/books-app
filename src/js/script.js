@@ -39,11 +39,15 @@
     render() {
 
       for (let book of this.data) {
+
+        book.ratingBgc = this.determineRatingBgc(book.rating);
+        book.ratingWidth = book.rating * 10;
         
         const generatedHTML = templates.bookTemplate(book);
 
         const generatedDOM = utils.createDOMFromHTML(generatedHTML);
         this.booksListContainer.appendChild(generatedDOM);
+
         
       }
       this.booksImagesContainer = document.querySelectorAll(select.listOf.booksImages);
@@ -94,7 +98,7 @@
             const index = thisBook.filters.indexOf(event.target.value);
             thisBook.filters.splice(index, 1);
           }
-          
+
         }
         thisBook.filterBooks();
       });
@@ -118,6 +122,19 @@
           bookImageID.classList.remove('hidden');
         }
       }
+    }
+
+    determineRatingBgc(rating) {
+      if (rating < 6) {
+        return 'linear-gradient(to bottom,  #fefcea 0%, #f1da36 100%);';
+      } else if (rating > 6 && rating <= 8) {
+        return 'linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%);';
+      } else if (rating > 8 && rating <= 9) {
+        return 'linear-gradient(to bottom, #299a0b 0%, #299a0b 100%);';
+      } else if (rating > 9) {
+        return 'linear-gradient(to bottom, #ff0084 0%,#ff0084 100%);';
+      }
+        
     }
 
   }
