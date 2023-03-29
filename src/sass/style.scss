@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -9,6 +11,7 @@ figure {
 }
 
 .container {
+  font-family: 'Mandali', sans-serif;
   max-width: 1000px;
   margin: 40px auto;
   text-align: center;
@@ -25,13 +28,11 @@ figure {
     display: inline-block;
     margin: 10px 30px;
     position: relative;
-    transition: .2s;
+    transition: 0.2s;
 
     &::after {
-      content: "\f004";
-      font-family: "Font Awesome 5 Free";
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
+      content: '\f004';
+      font-family: 'Font Awesome 5 Free';
       display: inline-block;
       font-style: normal;
       font-variant: normal;
@@ -43,7 +44,7 @@ figure {
       top: -20px;
       right: -20px;
       font-size: 40px;
-      text-shadow: 0 0 20px rgba(0,0,0,0.2);
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       opacity: 0;
     }
 
@@ -52,7 +53,7 @@ figure {
     }
 
     &.favorite {
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       transform: scale(1.1);
 
       &::after {
@@ -76,5 +77,4 @@ figure {
       width: 100%;
     }
   }
-
 }
